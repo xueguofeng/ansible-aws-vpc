@@ -14,7 +14,7 @@ zone1: us-west-2a
 zone2: us-west-2b
 zone3: us-west-2b
 
-state: present
+state: absent
 
 
 
