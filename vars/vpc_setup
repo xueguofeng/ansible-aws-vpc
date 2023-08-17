@@ -12,10 +12,10 @@ PriSub3Cidr: 172.20.6.0/24
 region: "us-west-2"
 zone1: us-west-2a
 zone2: us-west-2b
-zone3: us-west-2b
+zone3: us-west-2c
 
 state: present
-
+state1: present
 
 
 
