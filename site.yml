@@ -1,0 +1,29 @@
+- name: Set host to ip mapping in /etc/hosts file of all the instances in the stack
+  hosts: bh01
+  gather_facts: no
+  tasks:
+    - name: Import VPC setup Variable
+      include_vars: hostip
+
+    - name: Update hosts file for all the hosts
+      blockinfile:
+        path: /etc/hosts
+        block: |
+          {{bh_ip}} bh01
+         
+    - name: Install nginx
+      yum:
+        name: nginx
+        state: present
+
+      tags:
+        - package
+
+    - name: Start & ENable Nginx
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+      tags:
+        - svc
+       

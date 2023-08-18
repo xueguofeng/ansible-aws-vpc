@@ -3,6 +3,7 @@
   hosts: localhost
   connection: local
   gather_facts: no
+  become: false
   tasks:
     - name: Import VPC setup Variable
       include_vars: vars/bastion_setup
@@ -32,8 +33,9 @@
         rules:
           - proto: tcp
             from_port: 22
-            to_port: 22
+            to_port: 80
             cidr_ip: "{{MYIP}}"
+           
       register: BastionSG_out
       
     - name: Creating Bastion Host
@@ -57,6 +59,37 @@
       
     - debug:
         var: bastionHost_out.instances[0].public_ip_address
+
+    - name: Insert/Update Hosts IP & Name
+      blockinfile:
+        path: hostip
+        block: |
+          bh_ip: {{ bastionHost_out.instances[0].public_ip_address }}
+          
+          
+    - name: Insert/Update Inventory file 
+      blockinfile:
+        path: inventory
+        block: |
+          bh01 ansible_host={{ bastionHost_out.instances[0].public_ip_address }}
+          cntl ansible_host=127.0.0.1 ansible_connection=local
+          
+          [bhgrp]
+          bh01
+
+          [control]
+          cntl
+
+          [stack_inst:children]
+          bhgrp
+
+          [stack_inst:vars]
+          ansible_user=ec2-user
+          ansible_ssh_private_key_file=bastion-key.pem
+          #ansible_python_interpreter=/usr/bin/python3
+
+
+
 
       
       

@@ -1,0 +1,213 @@
+2023-08-18 11:45:45,340 p=1172859 u=gset n=ansible | PLAY [Set host to ip mapping in /etc/hosts file of all the instances in the stack] *********************************************
+2023-08-18 11:45:45,352 p=1172859 u=gset n=ansible | TASK [Gathering Facts] *********************************************************************************************************
+2023-08-18 11:45:51,631 p=1172859 u=gset n=ansible | [WARNING]: Platform linux on host bh01 is using the discovered Python interpreter at /usr/bin/python3.9, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-08-18 11:45:51,632 p=1172859 u=gset n=ansible | ok: [bh01]
+2023-08-18 11:45:51,640 p=1172859 u=gset n=ansible | TASK [Import VPC setup Variable] ***********************************************************************************************
+2023-08-18 11:45:51,662 p=1172859 u=gset n=ansible | fatal: [bh01]: FAILED! => {"ansible_facts": {}, "ansible_included_var_files": [], "changed": false, "message": "Could not find or access 'hostsip'\nSearched in:\n\t/home/gset/work/ansible-aws-vpc/vars/hostsip\n\t/home/gset/work/ansible-aws-vpc/hostsip\n\t/home/gset/work/ansible-aws-vpc/vars/hostsip\n\t/home/gset/work/ansible-aws-vpc/hostsip on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2023-08-18 11:45:51,664 p=1172859 u=gset n=ansible | PLAY RECAP *********************************************************************************************************************
+2023-08-18 11:45:51,664 p=1172859 u=gset n=ansible | bh01                       : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-18 11:46:05,524 p=1172884 u=gset n=ansible | PLAY [Set host to ip mapping in /etc/hosts file of all the instances in the stack] *********************************************
+2023-08-18 11:46:05,529 p=1172884 u=gset n=ansible | TASK [Gathering Facts] *********************************************************************************************************
+2023-08-18 11:46:09,918 p=1172884 u=gset n=ansible | [WARNING]: Platform linux on host bh01 is using the discovered Python interpreter at /usr/bin/python3.9, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-08-18 11:46:09,918 p=1172884 u=gset n=ansible | ok: [bh01]
+2023-08-18 11:46:09,926 p=1172884 u=gset n=ansible | TASK [Import VPC setup Variable] ***********************************************************************************************
+2023-08-18 11:46:09,949 p=1172884 u=gset n=ansible | ok: [bh01]
+2023-08-18 11:46:09,953 p=1172884 u=gset n=ansible | TASK [Update hosts file for all the hosts] *************************************************************************************
+2023-08-18 11:46:12,827 p=1172884 u=gset n=ansible | changed: [bh01]
+2023-08-18 11:46:12,837 p=1172884 u=gset n=ansible | PLAY RECAP *********************************************************************************************************************
+2023-08-18 11:46:12,837 p=1172884 u=gset n=ansible | bh01                       : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-18 11:51:54,304 p=1172919 u=gset n=ansible | PLAY [Set host to ip mapping in /etc/hosts file of all the instances in the stack] *********************************************
+2023-08-18 11:51:54,310 p=1172919 u=gset n=ansible | TASK [Gathering Facts] *********************************************************************************************************
+2023-08-18 11:52:00,957 p=1172919 u=gset n=ansible | [WARNING]: Platform linux on host bh01 is using the discovered Python interpreter at /usr/bin/python3.9, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-08-18 11:52:00,957 p=1172919 u=gset n=ansible | ok: [bh01]
+2023-08-18 11:52:00,965 p=1172919 u=gset n=ansible | TASK [Import VPC setup Variable] ***********************************************************************************************
+2023-08-18 11:52:00,988 p=1172919 u=gset n=ansible | ok: [bh01]
+2023-08-18 11:52:00,991 p=1172919 u=gset n=ansible | TASK [Update hosts file for all the hosts] *************************************************************************************
+2023-08-18 11:52:04,297 p=1172919 u=gset n=ansible | ok: [bh01]
+2023-08-18 11:52:04,309 p=1172919 u=gset n=ansible | PLAY RECAP *********************************************************************************************************************
+2023-08-18 11:52:04,309 p=1172919 u=gset n=ansible | bh01                       : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-18 14:32:12,725 p=1173674 u=gset n=ansible | PLAY [Setup Vprofile Bastion Host] *********************************************************************************************
+2023-08-18 14:32:12,733 p=1173674 u=gset n=ansible | TASK [Import VPC setup Variable] ***********************************************************************************************
+2023-08-18 14:32:12,757 p=1173674 u=gset n=ansible | ok: [localhost]
+2023-08-18 14:32:12,761 p=1173674 u=gset n=ansible | TASK [Import VPC setup Variable] ***********************************************************************************************
+2023-08-18 14:32:12,787 p=1173674 u=gset n=ansible | ok: [localhost]
+2023-08-18 14:32:12,789 p=1173674 u=gset n=ansible | TASK [Create vprofile ec2 key] *************************************************************************************************
+2023-08-18 14:32:12,963 p=1173674 u=gset n=ansible | fatal: [localhost]: FAILED! => {"changed": false, "module_stderr": "sudo: a password is required\n", "module_stdout": "", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 1}
+2023-08-18 14:32:12,964 p=1173674 u=gset n=ansible | PLAY RECAP *********************************************************************************************************************
+2023-08-18 14:32:12,964 p=1173674 u=gset n=ansible | localhost                  : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-18 14:33:15,226 p=1173710 u=gset n=ansible | PLAY [Setup Vprofile Bastion Host] ***********************************************************************************************
+2023-08-18 14:33:15,234 p=1173710 u=gset n=ansible | TASK [Import VPC setup Variable] *************************************************************************************************
+2023-08-18 14:33:15,252 p=1173710 u=gset n=ansible | ok: [localhost]
+2023-08-18 14:33:15,254 p=1173710 u=gset n=ansible | TASK [Import VPC setup Variable] *************************************************************************************************
+2023-08-18 14:33:15,270 p=1173710 u=gset n=ansible | ok: [localhost]
+2023-08-18 14:33:15,273 p=1173710 u=gset n=ansible | TASK [Create vprofile ec2 key] ***************************************************************************************************
+2023-08-18 14:33:15,409 p=1173710 u=gset n=ansible | fatal: [localhost]: FAILED! => {"changed": false, "module_stderr": "sudo: a password is required\n", "module_stdout": "", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 1}
+2023-08-18 14:33:15,410 p=1173710 u=gset n=ansible | PLAY RECAP ***********************************************************************************************************************
+2023-08-18 14:33:15,410 p=1173710 u=gset n=ansible | localhost                  : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-18 14:38:36,170 p=1173759 u=gset n=ansible | PLAY [Setup Vprofile Bastion Host] ***********************************************************************************************
+2023-08-18 14:38:36,179 p=1173759 u=gset n=ansible | TASK [Import VPC setup Variable] *************************************************************************************************
+2023-08-18 14:38:36,198 p=1173759 u=gset n=ansible | ok: [localhost]
+2023-08-18 14:38:36,201 p=1173759 u=gset n=ansible | TASK [Import VPC setup Variable] *************************************************************************************************
+2023-08-18 14:38:36,221 p=1173759 u=gset n=ansible | ok: [localhost]
+2023-08-18 14:38:36,223 p=1173759 u=gset n=ansible | TASK [Create vprofile ec2 key] ***************************************************************************************************
+2023-08-18 14:38:37,562 p=1173759 u=gset n=ansible | ok: [localhost]
+2023-08-18 14:38:37,566 p=1173759 u=gset n=ansible | TASK [Save private key into file bastion-key.pem] ********************************************************************************
+2023-08-18 14:38:37,584 p=1173759 u=gset n=ansible | skipping: [localhost]
+2023-08-18 14:38:37,586 p=1173759 u=gset n=ansible | TASK [Create Sec Grp for bastion host] *******************************************************************************************
+2023-08-18 14:38:39,670 p=1173759 u=gset n=ansible | ok: [localhost]
+2023-08-18 14:38:39,673 p=1173759 u=gset n=ansible | TASK [Creating Bastion Host] *****************************************************************************************************
+2023-08-18 14:38:43,539 p=1173759 u=gset n=ansible | changed: [localhost]
+2023-08-18 14:38:43,541 p=1173759 u=gset n=ansible | TASK [debug] *********************************************************************************************************************
+2023-08-18 14:38:43,566 p=1173759 u=gset n=ansible | ok: [localhost] => {
+    "bastionHost_out.instances[0].public_ip_address": "35.89.22.158"
+}
+2023-08-18 14:38:43,568 p=1173759 u=gset n=ansible | TASK [Insert/Update Hosts IP & Name] *********************************************************************************************
+2023-08-18 14:38:43,834 p=1173759 u=gset n=ansible | changed: [localhost]
+2023-08-18 14:38:43,836 p=1173759 u=gset n=ansible | TASK [Insert/Update Inventory file] **********************************************************************************************
+2023-08-18 14:38:44,031 p=1173759 u=gset n=ansible | changed: [localhost]
+2023-08-18 14:38:44,037 p=1173759 u=gset n=ansible | PLAY RECAP ***********************************************************************************************************************
+2023-08-18 14:38:44,037 p=1173759 u=gset n=ansible | localhost                  : ok=8    changed=3    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-18 14:53:46,603 p=1174006 u=gset n=ansible | PLAY [Set host to ip mapping in /etc/hosts file of all the instances in the stack] ***********************************************
+2023-08-18 14:53:46,613 p=1174006 u=gset n=ansible | TASK [Import VPC setup Variable] *************************************************************************************************
+2023-08-18 14:53:46,636 p=1174006 u=gset n=ansible | ok: [bh01]
+2023-08-18 14:53:46,639 p=1174006 u=gset n=ansible | TASK [Update hosts file for all the hosts] ***************************************************************************************
+2023-08-18 14:53:51,474 p=1174006 u=gset n=ansible | [WARNING]: Platform linux on host bh01 is using the discovered Python interpreter at /usr/bin/python3.9, but future installation
+of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-08-18 14:53:51,474 p=1174006 u=gset n=ansible | changed: [bh01]
+2023-08-18 14:53:51,476 p=1174006 u=gset n=ansible | TASK [Install nginx] *************************************************************************************************************
+2023-08-18 14:53:54,747 p=1174006 u=gset n=ansible | [WARNING]: Updating cache and auto-installing missing dependency: python3-apt
+
+2023-08-18 14:53:54,748 p=1174006 u=gset n=ansible | fatal: [bh01]: FAILED! => {"changed": false, "cmd": "apt-get update", "msg": "[Errno 2] No such file or directory: b'apt-get'", "rc": 2, "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2023-08-18 14:53:54,749 p=1174006 u=gset n=ansible | PLAY RECAP ***********************************************************************************************************************
+2023-08-18 14:53:54,749 p=1174006 u=gset n=ansible | bh01                       : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-18 14:55:26,116 p=1174050 u=gset n=ansible | PLAY [Set host to ip mapping in /etc/hosts file of all the instances in the stack] ***********************************************
+2023-08-18 14:55:26,124 p=1174050 u=gset n=ansible | TASK [Import VPC setup Variable] *************************************************************************************************
+2023-08-18 14:55:26,147 p=1174050 u=gset n=ansible | ok: [bh01]
+2023-08-18 14:55:26,150 p=1174050 u=gset n=ansible | TASK [Update hosts file for all the hosts] ***************************************************************************************
+2023-08-18 14:55:30,906 p=1174050 u=gset n=ansible | [WARNING]: Platform linux on host bh01 is using the discovered Python interpreter at /usr/bin/python3.9, but future installation
+of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-08-18 14:55:30,906 p=1174050 u=gset n=ansible | ok: [bh01]
+2023-08-18 14:55:30,909 p=1174050 u=gset n=ansible | TASK [Install nginx] *************************************************************************************************************
+2023-08-18 14:55:33,172 p=1174050 u=gset n=ansible | [WARNING]: Updating cache and auto-installing missing dependency: python3-apt
+
+2023-08-18 14:55:33,173 p=1174050 u=gset n=ansible | fatal: [bh01]: FAILED! => {"changed": false, "cmd": "apt-get update", "msg": "[Errno 2] No such file or directory: b'apt-get'", "rc": 2, "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2023-08-18 14:55:33,174 p=1174050 u=gset n=ansible | PLAY RECAP ***********************************************************************************************************************
+2023-08-18 14:55:33,174 p=1174050 u=gset n=ansible | bh01                       : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-18 14:58:29,796 p=1174092 u=gset n=ansible | PLAY [Set host to ip mapping in /etc/hosts file of all the instances in the stack] ***********************************************
+2023-08-18 14:58:29,809 p=1174092 u=gset n=ansible | TASK [Import VPC setup Variable] *************************************************************************************************
+2023-08-18 14:58:29,825 p=1174092 u=gset n=ansible | ok: [bh01]
+2023-08-18 14:58:29,827 p=1174092 u=gset n=ansible | TASK [Update hosts file for all the hosts] ***************************************************************************************
+2023-08-18 14:58:34,390 p=1174092 u=gset n=ansible | [WARNING]: Platform linux on host bh01 is using the discovered Python interpreter at /usr/bin/python3.9, but future installation
+of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-08-18 14:58:34,390 p=1174092 u=gset n=ansible | ok: [bh01]
+2023-08-18 14:58:34,397 p=1174092 u=gset n=ansible | TASK [Install nginx] *************************************************************************************************************
+2023-08-18 14:58:38,986 p=1174092 u=gset n=ansible | fatal: [bh01]: FAILED! => {"ansible_facts": {"pkg_mgr": "dnf"}, "changed": false, "msg": "Unsupported parameters for (ansible.legacy.dnf) module: cache_valid_time. Supported parameters include: allow_downgrade, allowerasing, autoremove, bugfix, cacheonly, conf_file, disable_excludes, disable_gpg_check, disable_plugin, disablerepo, download_dir, download_only, enable_plugin, enablerepo, exclude, install_repoquery, install_weak_deps, installroot, list, lock_timeout, name, nobest, releasever, security, skip_broken, sslverify, state, update_cache, update_only, validate_certs (expire-cache, pkg)."}
+2023-08-18 14:58:38,987 p=1174092 u=gset n=ansible | PLAY RECAP ***********************************************************************************************************************
+2023-08-18 14:58:38,987 p=1174092 u=gset n=ansible | bh01                       : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-08-18 14:59:06,374 p=1174129 u=gset n=ansible | PLAY [Set host to ip mapping in /etc/hosts file of all the instances in the stack] ***********************************************
+2023-08-18 14:59:06,381 p=1174129 u=gset n=ansible | TASK [Import VPC setup Variable] *************************************************************************************************
+2023-08-18 14:59:06,412 p=1174129 u=gset n=ansible | ok: [bh01]
+2023-08-18 14:59:06,415 p=1174129 u=gset n=ansible | TASK [Update hosts file for all the hosts] ***************************************************************************************
+2023-08-18 14:59:10,150 p=1174129 u=gset n=ansible | [WARNING]: Platform linux on host bh01 is using the discovered Python interpreter at /usr/bin/python3.9, but future installation
+of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-08-18 14:59:10,151 p=1174129 u=gset n=ansible | ok: [bh01]
+2023-08-18 14:59:10,155 p=1174129 u=gset n=ansible | TASK [Install nginx] *************************************************************************************************************
+2023-08-18 14:59:18,391 p=1174129 u=gset n=ansible | changed: [bh01]
+2023-08-18 14:59:18,398 p=1174129 u=gset n=ansible | TASK [Start & ENable Nginx] ******************************************************************************************************
+2023-08-18 14:59:25,188 p=1174129 u=gset n=ansible | changed: [bh01]
+2023-08-18 14:59:25,196 p=1174129 u=gset n=ansible | PLAY RECAP ***********************************************************************************************************************
+2023-08-18 14:59:25,196 p=1174129 u=gset n=ansible | bh01                       : ok=4    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-18 14:59:34,228 p=1174174 u=gset n=ansible | PLAY [Set host to ip mapping in /etc/hosts file of all the instances in the stack] ***********************************************
+2023-08-18 14:59:34,239 p=1174174 u=gset n=ansible | TASK [Import VPC setup Variable] *************************************************************************************************
+2023-08-18 14:59:34,258 p=1174174 u=gset n=ansible | ok: [bh01]
+2023-08-18 14:59:34,261 p=1174174 u=gset n=ansible | TASK [Update hosts file for all the hosts] ***************************************************************************************
+2023-08-18 14:59:38,293 p=1174174 u=gset n=ansible | [WARNING]: Platform linux on host bh01 is using the discovered Python interpreter at /usr/bin/python3.9, but future installation
+of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-08-18 14:59:38,293 p=1174174 u=gset n=ansible | ok: [bh01]
+2023-08-18 14:59:38,295 p=1174174 u=gset n=ansible | TASK [Install nginx] *************************************************************************************************************
+2023-08-18 14:59:42,794 p=1174174 u=gset n=ansible | ok: [bh01]
+2023-08-18 14:59:42,796 p=1174174 u=gset n=ansible | TASK [Start & ENable Nginx] ******************************************************************************************************
+2023-08-18 14:59:47,634 p=1174174 u=gset n=ansible | ok: [bh01]
+2023-08-18 14:59:47,642 p=1174174 u=gset n=ansible | PLAY RECAP ***********************************************************************************************************************
+2023-08-18 14:59:47,643 p=1174174 u=gset n=ansible | bh01                       : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-08-18 15:00:38,815 p=1174229 u=gset n=ansible | PLAY [Setup Vprofile Bastion Host] ***********************************************************************************************
+2023-08-18 15:00:38,826 p=1174229 u=gset n=ansible | TASK [Import VPC setup Variable] *************************************************************************************************
+2023-08-18 15:00:38,845 p=1174229 u=gset n=ansible | ok: [localhost]
+2023-08-18 15:00:38,847 p=1174229 u=gset n=ansible | TASK [Import VPC setup Variable] *************************************************************************************************
+2023-08-18 15:00:38,876 p=1174229 u=gset n=ansible | ok: [localhost]
+2023-08-18 15:00:38,878 p=1174229 u=gset n=ansible | TASK [Create vprofile ec2 key] ***************************************************************************************************
+2023-08-18 15:00:39,986 p=1174229 u=gset n=ansible | ok: [localhost]
+2023-08-18 15:00:39,988 p=1174229 u=gset n=ansible | TASK [Save private key into file bastion-key.pem] ********************************************************************************
+2023-08-18 15:00:40,010 p=1174229 u=gset n=ansible | skipping: [localhost]
+2023-08-18 15:00:40,012 p=1174229 u=gset n=ansible | TASK [Create Sec Grp for bastion host] *******************************************************************************************
+2023-08-18 15:00:42,654 p=1174229 u=gset n=ansible | changed: [localhost]
+2023-08-18 15:00:42,657 p=1174229 u=gset n=ansible | TASK [Creating Bastion Host] *****************************************************************************************************
+2023-08-18 15:00:44,575 p=1174229 u=gset n=ansible | ok: [localhost]
+2023-08-18 15:00:44,578 p=1174229 u=gset n=ansible | TASK [debug] *********************************************************************************************************************
+2023-08-18 15:00:44,603 p=1174229 u=gset n=ansible | ok: [localhost] => {
+    "bastionHost_out.instances[0].public_ip_address": "35.89.22.158"
+}
+2023-08-18 15:00:44,608 p=1174229 u=gset n=ansible | TASK [Insert/Update Hosts IP & Name] *********************************************************************************************
+2023-08-18 15:00:44,871 p=1174229 u=gset n=ansible | ok: [localhost]
+2023-08-18 15:00:44,874 p=1174229 u=gset n=ansible | TASK [Insert/Update Inventory file] **********************************************************************************************
+2023-08-18 15:00:45,052 p=1174229 u=gset n=ansible | ok: [localhost]
+2023-08-18 15:00:45,060 p=1174229 u=gset n=ansible | PLAY RECAP ***********************************************************************************************************************
+2023-08-18 15:00:45,060 p=1174229 u=gset n=ansible | localhost                  : ok=8    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-18 15:32:41,616 p=1174436 u=gset n=ansible | PLAY [Setup Vprofile Bastion Host] ***********************************************************************************************
+2023-08-18 15:32:41,624 p=1174436 u=gset n=ansible | TASK [Import VPC setup Variable] *************************************************************************************************
+2023-08-18 15:32:41,648 p=1174436 u=gset n=ansible | ok: [localhost]
+2023-08-18 15:32:41,651 p=1174436 u=gset n=ansible | TASK [Import VPC setup Variable] *************************************************************************************************
+2023-08-18 15:32:41,663 p=1174436 u=gset n=ansible | ok: [localhost]
+2023-08-18 15:32:41,666 p=1174436 u=gset n=ansible | TASK [Create vprofile ec2 key] ***************************************************************************************************
+2023-08-18 15:32:42,533 p=1174436 u=gset n=ansible | ok: [localhost]
+2023-08-18 15:32:42,536 p=1174436 u=gset n=ansible | TASK [Save private key into file bastion-key.pem] ********************************************************************************
+2023-08-18 15:32:42,550 p=1174436 u=gset n=ansible | skipping: [localhost]
+2023-08-18 15:32:42,552 p=1174436 u=gset n=ansible | TASK [Create Sec Grp for bastion host] *******************************************************************************************
+2023-08-18 15:32:44,312 p=1174436 u=gset n=ansible | ok: [localhost]
+2023-08-18 15:32:44,314 p=1174436 u=gset n=ansible | TASK [Creating Bastion Host] *****************************************************************************************************
+2023-08-18 15:32:47,761 p=1174436 u=gset n=ansible | changed: [localhost]
+2023-08-18 15:32:47,765 p=1174436 u=gset n=ansible | TASK [debug] *********************************************************************************************************************
+2023-08-18 15:32:47,793 p=1174436 u=gset n=ansible | ok: [localhost] => {
+    "bastionHost_out.instances[0].public_ip_address": "52.12.90.182"
+}
+2023-08-18 15:32:47,795 p=1174436 u=gset n=ansible | TASK [Insert/Update Hosts IP & Name] *********************************************************************************************
+2023-08-18 15:32:48,028 p=1174436 u=gset n=ansible | changed: [localhost]
+2023-08-18 15:32:48,031 p=1174436 u=gset n=ansible | TASK [Insert/Update Inventory file] **********************************************************************************************
+2023-08-18 15:32:48,200 p=1174436 u=gset n=ansible | changed: [localhost]
+2023-08-18 15:32:48,206 p=1174436 u=gset n=ansible | PLAY RECAP ***********************************************************************************************************************
+2023-08-18 15:32:48,206 p=1174436 u=gset n=ansible | localhost                  : ok=8    changed=3    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-08-18 15:35:03,713 p=1174585 u=gset n=ansible | ERROR! the playbook: site.yaml could not be found
+2023-08-18 15:35:09,237 p=1174588 u=gset n=ansible | PLAY [Set host to ip mapping in /etc/hosts file of all the instances in the stack] ***********************************************
+2023-08-18 15:35:09,245 p=1174588 u=gset n=ansible | TASK [Import VPC setup Variable] *************************************************************************************************
+2023-08-18 15:35:09,262 p=1174588 u=gset n=ansible | ok: [bh01]
+2023-08-18 15:35:09,265 p=1174588 u=gset n=ansible | TASK [Update hosts file for all the hosts] ***************************************************************************************
+2023-08-18 15:35:13,452 p=1174588 u=gset n=ansible | [WARNING]: Platform linux on host bh01 is using the discovered Python interpreter at /usr/bin/python3.9, but future installation
+of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.14/reference_appendices/interpreter_discovery.html for more information.
+
+2023-08-18 15:35:13,452 p=1174588 u=gset n=ansible | changed: [bh01]
+2023-08-18 15:35:13,454 p=1174588 u=gset n=ansible | TASK [Install nginx] *************************************************************************************************************
+2023-08-18 15:35:21,043 p=1174588 u=gset n=ansible | changed: [bh01]
+2023-08-18 15:35:21,045 p=1174588 u=gset n=ansible | TASK [Start & ENable Nginx] ******************************************************************************************************
+2023-08-18 15:35:26,579 p=1174588 u=gset n=ansible | changed: [bh01]
+2023-08-18 15:35:26,587 p=1174588 u=gset n=ansible | PLAY RECAP ***********************************************************************************************************************
+2023-08-18 15:35:26,587 p=1174588 u=gset n=ansible | bh01                       : ok=4    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
